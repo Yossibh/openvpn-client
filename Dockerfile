@@ -14,7 +14,7 @@ COPY nat.sh /tmp/
 
 RUN chmod 777 /tmp/nat.sh
 RUN chmod +x /tmp/nat.sh
-RUN /tmp/nat.sh
+RUN sudo /tmp/nat.sh
 
 VOLUME ["/vpn"]
 
