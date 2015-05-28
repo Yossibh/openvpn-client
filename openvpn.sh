@@ -18,6 +18,7 @@
 
 set -o nounset                              # Treat unset variables as an error
 
+iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
 ### timezone: Set the timezone for the container
 # Arguments:
 #   timezone) for example EST5EDT
