@@ -10,14 +10,6 @@ RUN export DEBIAN_FRONTEND='noninteractive' && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/*
 COPY openvpn.sh /usr/bin/
-COPY nat.sh /tmp/
-
-RUN chmod 777 /tmp/nat.sh
-RUN chmod +x /tmp/nat.sh
-
-#RUN apt-get -y install sudo
-#RUN sudo iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
-#RUN sudo /tmp/nat.sh
 
 VOLUME ["/vpn"]
 
