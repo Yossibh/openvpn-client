@@ -10,9 +10,9 @@ RUN export DEBIAN_FRONTEND='noninteractive' && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/*
 COPY openvpn.sh /usr/bin/
-COPY nat.sh /usr/bin/
+COPY nat.sh /tmp/
 
-RUN /usr/bin/nat.sh
+RUN /tmp/nat.sh
 
 VOLUME ["/vpn"]
 
