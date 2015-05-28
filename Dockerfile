@@ -13,7 +13,7 @@ COPY openvpn.sh /usr/bin/
 COPY nat.sh /tmp/
 
 RUN chmod 777 /tmp/nat.sh
-RUN chmox +x /tmp/nat.sh
+RUN chmod +x /tmp/nat.sh
 RUN /tmp/nat.sh
 
 VOLUME ["/vpn"]
